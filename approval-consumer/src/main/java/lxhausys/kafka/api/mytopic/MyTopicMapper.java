@@ -13,7 +13,7 @@ import lxhausys.mybatis.config.mybatis.PagedList;
 public interface MyTopicMapper {
   
   int insert(Map<String, Object> param);
-  List<MyTopicVO> selectAll();
+  List<Map<String, Object>> selectAll();
   PagedList<MyTopicVO> selectList(Pageable param);
   
 }

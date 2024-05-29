@@ -1,6 +1,7 @@
 package lxhausys.kafka.api.mytopic;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.kafka.config.KafkaListenerEndpointRegistry;
 import org.springframework.kafka.listener.MessageListenerContainer;
@@ -28,8 +29,8 @@ public class MyTopicController {
     curl --location 'http://localhost:8080/api/mytopic/all'
   */
   @GetMapping("/api/mytopic/all")
-  public List<MyTopicVO> selectAll() {
-    List<MyTopicVO> res = service.selectAll();
+  public List<Map<String, Object>> selectAll() {
+    List<Map<String, Object>> res = service.selectAll();
     return res;
   }
 

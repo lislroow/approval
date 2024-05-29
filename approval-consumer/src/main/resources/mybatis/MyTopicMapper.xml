@@ -3,13 +3,13 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="lxhausys.kafka.api.mytopic.MyTopicMapper">
   
-  <select id="selectAll" resultType="EmployVO">
+  <select id="selectAll" resultType="java.util.HashMap">
     SELECT *
     FROM   mytopic
     ORDER BY id DESC
   </select>
   
-  <select id="selectList" resultType="EmployVO">
+  <select id="selectList" resultType="java.util.Map">
     SELECT *
     FROM   mytopic
     ORDER BY id DESC

@@ -1,6 +1,7 @@
 package lxhausys.kafka.api.mytopic;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,8 +20,8 @@ public class MyTopicService {
     this.mapper = mapper;
   }
   
-  public List<MyTopicVO> selectAll() {
-    List<MyTopicVO> list = null;
+  public List<Map<String, Object>> selectAll() {
+    List<Map<String, Object>> list = null;
     list = mapper.selectAll();
     return list;
   }
